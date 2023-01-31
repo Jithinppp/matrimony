@@ -1,5 +1,7 @@
 import { Outlet } from "react-router-dom";
+import Footer from "../footer/Footer.component";
 import {
+  MainContainer,
   MainLogo,
   NavigationContainer,
   NavItem,
@@ -8,7 +10,7 @@ import {
 
 const Navigation = () => {
   return (
-    <>
+    <MainContainer>
       <NavigationContainer>
         <MainLogo>Matrimony</MainLogo>
         <NavItemsContainer>
@@ -16,11 +18,11 @@ const Navigation = () => {
           <NavItem to={"/signin"}>Sign in</NavItem>
           <NavItem to={"/signup"}>Sign up</NavItem>
           <NavItem to={"/about"}>About</NavItem>
-          <NavItem to={"/admin"}>Admin</NavItem>
         </NavItemsContainer>
       </NavigationContainer>
       <Outlet />
-    </>
+      <Footer />
+    </MainContainer>
   );
 };
 export default Navigation;

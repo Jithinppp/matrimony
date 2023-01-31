@@ -4,6 +4,13 @@ export const userContext = createContext({
   phoneAuth: null,
   steps: null,
   setAuthenticated: () => {},
+  firstName: null,
+  secondName: null,
+  emailId: null,
+  password: null,
+  dateOfBirth: null,
+  address: null,
+  gender: null,
 });
 
 export const UserProvider = ({ children }) => {
